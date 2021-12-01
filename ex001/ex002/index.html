@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle salárial</title>
+</head>
+<body>
+    <h1>contorle salarial dos funcionários</h1>
+    <button onclick = "salário()">controlar salário</button>
+    <p id = "total">o resultado vai aparecer exatamente aqui</p>
+
+    <script>
+        function salário(){
+        let nome = window.prompt("Seu nome, por favor")
+        let num1 = Number(window.prompt("qual o seu salário?"))
+        let num2 = Number(window.prompt("qual será o seu reajuste?"))
+        let valores = (num1 * num2) / 100
+        let total = (valores + num1)
+
+        let saída = document.getElementById ("total")
+        saída.innerHTML = `O(a) funcionário(a) ${nome} recebia R$${num1} por mês. depois do reajuste, passará a receber ${valores} a mais e receberá um novo salário de R$${total} `     
+        }
+    </script>
+</body>
+</html>
