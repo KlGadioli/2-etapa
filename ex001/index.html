@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <main>
+        <h1>Calculadora Especial</h1>
+        <button onclick="Cal ()">CALCULAR</button>
+        <p id="resultado">0 resultado aqui..</p>
+        
+     </main>
+        
+    <script>
+         function Cal(){
+        
+         let nu1 = Number(prompt("Primeiro número"))
+    
+         let nu2 = Number(prompt("Segundo número"))
+    
+         let adi= nu1 + nu2
+         let subitra= nu1 - nu2
+         let multi= nu1 * nu2
+         let potencia = nu1 **  nu2
+
+         let resultado = document.getElementById("resultado")
+         resultado.innerHTML=`A subitração de ${nu1} e ${nu2} será = ${subitra}
+         <br> A soma de ${nu1} e ${nu2} será = ${adi}
+         <br> A multiplicação de ${nu1} e ${nu2} será = ${multi}
+         <br> A potência de ${nu1} e ${nu2} será = ${potencia}`
+
+         }
+    </script>
+</body>
+</html>
